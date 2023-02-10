@@ -68,7 +68,7 @@ public class ShopProductPage extends BasePage{
 		return driver.findElement(productTwelve);
 	}public WebElement getProductThirteen() throws IOException {
 		this.driver = getDriver();
-		return null;
+		return driver.findElement(productThirteen);
 	}
 
 }
