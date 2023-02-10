@@ -17,6 +17,8 @@ public class ProductContentPanel extends BasePage{
 	By inputBox = By.cssSelector("input#number_of_person");
 	By addToCartBtn = By.cssSelector(".btn-save-cart");
 	By closeBtn = By.cssSelector(".addclose.mb-4.mt-2.pointer.text-center > .text-danger.text-uppercase");
+	By qtyAddBtn = By.cssSelector("button#add > .material-icons");
+	By qtyReduceBtn = By.cssSelector("button#add > .material-icons");
 
 	public ProductContentPanel() throws IOException {
 		super();	
@@ -40,6 +42,14 @@ public class ProductContentPanel extends BasePage{
 	public WebElement getCloseBtn() throws IOException {
 		this.driver = getDriver();
 		return driver.findElement(closeBtn);
+	}
+	public WebElement getQtyAddBtn() throws IOException {
+		this.driver = getDriver();
+		return driver.findElement(qtyAddBtn);
+	}
+	public WebElement getQtyReduceBtn() throws IOException {
+		this.driver = getDriver();
+		return driver.findElement(qtyReduceBtn);
 	}
 
 }
