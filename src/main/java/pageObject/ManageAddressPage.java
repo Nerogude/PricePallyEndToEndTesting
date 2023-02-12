@@ -14,6 +14,7 @@ public class ManageAddressPage extends BasePage{
 	
 	By addNewAddressLink = By.cssSelector(".d-flex.justify-content-end [data-toggle]");
 	By useAddressBtn = By.cssSelector("main [tabindex='-1']:nth-child(15) .select-address");
+	By closeBtn = By.cssSelector("main [tabindex='-1']:nth-child(15) [data-dismiss]");
 
 	public ManageAddressPage() throws IOException {
 		super();	
@@ -25,6 +26,10 @@ public class ManageAddressPage extends BasePage{
 	public WebElement getUseAddressBtn() throws IOException {
 		this.driver = getDriver();
 		return driver.findElement(useAddressBtn);
+	}
+	public WebElement getCloseBtn() throws IOException {
+		this.driver = getDriver();
+		return driver.findElement(closeBtn);
 	}
 
 }
