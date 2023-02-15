@@ -15,6 +15,7 @@ public class ShopCartPage extends BasePage{
 	By qtyReduceBtn = By.cssSelector(".rowCount98551368 [onclick='decrease\\(\\'1563204830\\' \\, \\'98551368\\'\\)'] .material-icons");
 	By qtyIncreaseBtn = By.cssSelector(".rowCount98551368 [onclick='increase\\(\\'1563204830\\' \\, \\'98551368\\'\\)'] .material-icons");
 	By selectAddressLink = By.cssSelector(".light-brown.normal-address.pointer.text-uppercase");
+	By checkOutBtn = By.cssSelector("#checkAddress");
 	
 	public ShopCartPage() throws IOException {
 		super();	
@@ -31,6 +32,10 @@ public class ShopCartPage extends BasePage{
 	public WebElement getSelectAddressLink() throws IOException {
 		this.driver = getDriver();
 		return driver.findElement(selectAddressLink);
+	}
+	public WebElement getCheckOutBtn() throws IOException {
+		this.driver = getDriver();
+		return driver.findElement(checkOutBtn);
 	}
 
 }
